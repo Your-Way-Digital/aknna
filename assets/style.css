@@ -1,0 +1,112 @@
+/* AKNNA — Legal pages — OPTION A: "Neon Pulse" (dark club/EDM app) */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&display=swap');
+
+:root{
+  --bg:#000000;
+  --surface:#121212;
+  --text:#F3F1FA;
+  --text-soft:#9C97B8;
+  --line:rgba(255,255,255,0.10);
+  --accent:#FF2E2E;
+  --accent-2:#7C5CFF;
+  --max:760px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Archivo', sans-serif;
+  font-weight:500;
+  font-size:16.5px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--text);}
+a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+.topbar{
+  position:sticky; top:0; z-index:40;
+  background:#000000; color:#fff;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 20px;
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(255,46,46,0.22);
+}
+.brand{
+  display:flex; align-items:baseline; gap:8px;
+  font-family:'Archivo', sans-serif; font-weight:900;
+  letter-spacing:3px; font-size:14px; text-decoration:none; color:#fff;
+}
+.brand .star{color:var(--accent); font-weight:700;}
+.doc-switch{display:flex; gap:4px; font-family:'Archivo',sans-serif;}
+.doc-switch a{
+  font-size:10.5px; letter-spacing:1.5px; font-weight:700; text-decoration:none;
+  color:rgba(255,255,255,0.5); padding:8px 12px; border-radius:999px;
+}
+.doc-switch a.active{color:#fff; background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+
+.langbar{
+  display:flex; align-items:center; gap:10px; padding:10px 20px;
+  background:#000000;
+  border-bottom:1px solid var(--line);
+}
+.lang-pill{display:inline-flex; background:rgba(255,255,255,0.06); border-radius:999px; padding:3px;}
+.lang-pill button{
+  font-family:'Archivo', sans-serif; font-size:11px; font-weight:700; letter-spacing:1.5px;
+  color:rgba(255,255,255,0.55); background:transparent; border:none; cursor:pointer;
+  padding:7px 16px; border-radius:999px;
+}
+.lang-pill button.active{background:var(--accent); color:#fff;}
+.updated{margin-left:auto; font-family:'Archivo',sans-serif; font-size:10.5px; letter-spacing:0.5px; color:rgba(255,255,255,0.4);}
+
+.wrap{display:grid; grid-template-columns:250px minmax(0,1fr); gap:56px; max-width:1120px; margin:0 auto; padding:48px 24px 96px;}
+.toc{position:sticky; top:96px; align-self:start; max-height:calc(100vh - 130px); overflow:auto;}
+.toc-title{font-family:'Archivo',sans-serif; font-size:11px; font-weight:800; letter-spacing:2px; color:var(--text-soft); margin:0 0 14px;}
+.toc ol{list-style:none; margin:0; padding:0;}
+.toc li{margin:0 0 2px;}
+.toc a{display:block; text-decoration:none; color:var(--text-soft); font-family:'Archivo',sans-serif; font-size:12.5px; line-height:1.5; padding:6px 10px; border-radius:8px; border-left:2px solid transparent;}
+.toc a:hover{color:var(--text); background:rgba(255,255,255,0.04);}
+.toc a.current{color:#fff; border-left-color:var(--accent); background:rgba(255,46,46,0.10); font-weight:700;}
+.toc-mobile{display:none;}
+
+.content{max-width:var(--max);}
+.doc-header{margin-bottom:40px;}
+.eyebrow{font-family:'Archivo',sans-serif; font-size:11px; font-weight:800; letter-spacing:3px; color:var(--accent-2); margin:0 0 10px;}
+h1{font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(28px,4vw,40px); letter-spacing:-0.5px; line-height:1.08; margin:0 0 14px; color:#fff;}
+.meta{font-family:'Archivo',sans-serif; font-size:12.5px; color:var(--text-soft); letter-spacing:0.3px;}
+.meta strong{color:#fff;}
+
+.chapter{padding-top:28px; margin-top:28px; border-top:1px solid var(--line); scroll-margin-top:150px;}
+.chapter:first-of-type{border-top:none; margin-top:8px;}
+.chapter h2{font-family:'Archivo',sans-serif; font-weight:800; font-size:15px; letter-spacing:1.2px; text-transform:uppercase; color:#fff; margin:0 0 14px; display:flex; gap:10px; align-items:baseline;}
+.chapter h2 .mark{color:var(--accent); font-size:13px;}
+.chapter p{margin:0 0 12px; color:var(--text); font-size:16px;}
+.chapter p .num{color:var(--accent-2); font-weight:700; margin-right:6px; font-family:'Archivo',sans-serif; font-size:13px;}
+.chapter ul{margin:0 0 12px; padding-left:22px;}
+.chapter li{margin-bottom:8px;}
+.chapter strong{font-weight:700; color:#fff;}
+
+.lang-block{display:none;}
+.lang-block.active{display:block;}
+
+footer{border-top:1px solid var(--line); margin-top:64px; padding-top:28px; font-family:'Archivo',sans-serif; font-size:11.5px; color:var(--text-soft); letter-spacing:0.3px; display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:space-between; align-items:center;}
+footer a{color:var(--text-soft);}
+footer .fstar{color:var(--accent);}
+
+.hub{max-width:520px; margin:0 auto; padding:64px 24px;}
+.hub h1{font-family:'Archivo',sans-serif; font-weight:900; font-size:28px; margin:0 0 8px; color:#fff;}
+.hub p.lead{color:#FFFFFF; margin:0 0 32px;}
+.hub a.card{display:flex; align-items:center; justify-content:space-between; padding:20px 22px; margin-bottom:14px; background:var(--surface); border:1px solid var(--line); border-radius:14px; text-decoration:none; color:#fff; font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; transition:border-color .15s;}
+.hub a.card:hover{border-color:var(--accent);}
+.hub a.card span.arrow{color:var(--accent); font-size:20px;}
+
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr; padding:32px 18px 72px; gap:20px;}
+  .toc{position:static; max-height:none; border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:16px 18px 4px; margin-bottom:8px;}
+  .langbar{flex-wrap:wrap;}
+  .updated{margin-left:0; width:100%;}
+}
