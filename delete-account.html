@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Account — AKNNA</title>
+<link rel="icon" href="favicon.ico">
+<style>
+  :root{
+    --bg:#000; --panel:#111; --border:#242424; --red:#E24B4A;
+    --text:#fff; --text-dim:#999; --text-faint:#666;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px; border-bottom:1px solid var(--border);
+    max-width:900px; margin:0 auto;
+  }
+  .logo{font-weight:700; font-size:15px; letter-spacing:1.5px; color:#fff; text-decoration:none;}
+  .logo span{color:var(--red);}
+  nav{display:flex; gap:18px; align-items:center;}
+  nav a{color:var(--text-faint); font-size:11px; font-weight:600; letter-spacing:0.5px; text-decoration:none;}
+  nav a:hover{color:#fff;}
+  main{max-width:640px; margin:0 auto; padding:48px 24px 80px;}
+  .eyebrow{color:var(--red); font-size:11px; font-weight:600; letter-spacing:1px; margin:0 0 8px;}
+  h1{font-size:32px; font-weight:800; margin:0 0 6px; letter-spacing:-0.5px;}
+  .meta{color:var(--text-faint); font-size:12px; margin:0 0 36px;}
+  .lang-toggle{display:flex; gap:4px; background:#0d0d0d; border:1px solid var(--border); border-radius:999px; padding:3px; width:fit-content; margin-bottom:32px;}
+  .lang-btn{border:none; background:transparent; color:var(--text-faint); font-size:11px; font-weight:600; padding:6px 14px; border-radius:999px; cursor:pointer;}
+  .lang-btn.active{background:var(--red); color:#fff;}
+  p.intro{color:#ccc; font-size:14px; line-height:1.7; margin-bottom:32px;}
+  .step{background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin-bottom:14px;}
+  .step-head{display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+  .step-num{
+    width:22px; height:22px; border-radius:50%; background:var(--red); color:#fff;
+    font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .step-title{font-size:14px; font-weight:700; color:#fff;}
+  .step p{color:var(--text-dim); font-size:13px; line-height:1.6; margin:0 0 0 32px;}
+  .step code{background:#000; border:1px solid var(--border); border-radius:5px; padding:1px 6px; font-size:12px; color:#eee;}
+  .divider{height:1px; background:var(--border); margin:36px 0;}
+  h2{font-size:14px; font-weight:700; color:#fff; margin:0 0 12px;}
+  .data-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:8px;}
+  .data-col{background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:14px 16px;}
+  .data-col h3{font-size:11px; font-weight:700; letter-spacing:0.5px; margin:0 0 8px;}
+  .data-col.deleted h3{color:#7bc47f;}
+  .data-col.retained h3{color:var(--red);}
+  .data-col ul{margin:0; padding-left:16px; color:var(--text-dim); font-size:12px; line-height:1.7;}
+  .note{color:var(--text-faint); font-size:11px; line-height:1.6; margin-top:20px;}
+  footer{border-top:1px solid var(--border); padding:24px; text-align:center;}
+  footer p{color:var(--text-faint); font-size:11px; margin:0;}
+  footer a{color:var(--text-faint);}
+  @media (max-width:520px){
+    .data-grid{grid-template-columns:1fr;}
+    h1{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">✦ <span>AKNNA</span></a>
+  <nav>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms-of-use.html">Terms</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow" data-i18n="eyebrow">AKNNA APP · YOUR WAY DIGITAL</p>
+  <h1 data-i18n="title">Delete your account</h1>
+  <p class="meta"><span data-i18n="version">Version 1.0</span> · <span data-i18n="effective">Effective date: September 3, 2026</span></p>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="pt">PT</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+
+  <p class="intro" data-i18n="intro">
+    You can permanently delete your Aknna account and associated data at any time, either directly in the app or by email. This page explains both methods and what happens to your data afterward.
+  </p>
+
+  <div class="step">
+    <div class="step-head">
+      <span class="step-num">1</span>
+      <span class="step-title" data-i18n="step1title">In the app</span>
+    </div>
+    <p data-i18n="step1body">Open Aknna → <code>Profile</code> → <code>Settings</code> → <code>Delete Account</code>, then confirm. Deletion is immediate and cannot be undone.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head">
+      <span class="step-num">2</span>
+      <span class="step-title" data-i18n="step2title">By email</span>
+    </div>
+    <p data-i18n="step2body">No access to the app? Email <code>support@aknnaofficial.com</code> from your account's registered address with the subject "Delete my account." We process these requests within 30 days.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2 data-i18n="whathappens">What happens to your data</h2>
+  <div class="data-grid">
+    <div class="data-col deleted">
+      <h3 data-i18n="deletedHead">DELETED</h3>
+      <ul data-i18n-list="deletedList">
+        <li>Profile info (name, photo, email)</li>
+        <li>Wallet balance &amp; transaction history</li>
+        <li>Chat messages &amp; private photos</li>
+        <li>Gifts, points &amp; referral data</li>
+      </ul>
+    </div>
+    <div class="data-col retained">
+      <h3 data-i18n="retainedHead">RETAINED</h3>
+      <ul data-i18n-list="retainedList">
+        <li>Records legally required for tax/accounting purposes, kept for up to 5 years as described in our Privacy Policy</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note" data-i18n="note">See our <a href="privacy-policy.html" style="color:#E24B4A;">Privacy Policy</a> for full details on data retention and your rights under GDPR, LGPD and CCPA/CPRA.</p>
+</main>
+
+<footer>
+  <p>© 2026 Your Way Digital · <a href="privacy-policy.html">Privacy</a> · <a href="terms-of-use.html">Terms</a></p>
+</footer>
+
+<script>
+const i18n = {
+  en: {
+    eyebrow: "AKNNA APP · YOUR WAY DIGITAL",
+    title: "Delete your account",
+    version: "Version 1.0",
+    effective: "Effective date: September 3, 2026",
+    intro: "You can permanently delete your Aknna account and associated data at any time, either directly in the app or by email. This page explains both methods and what happens to your data afterward.",
+    step1title: "In the app",
+    step1body: 'Open Aknna → <code>Profile</code> → <code>Settings</code> → <code>Delete Account</code>, then confirm. Deletion is immediate and cannot be undone.',
+    step2title: "By email",
+    step2body: 'No access to the app? Email <code>support@aknnaofficial.com</code> from your account\'s registered address with the subject "Delete my account." We process these requests within 30 days.',
+    whathappens: "What happens to your data",
+    deletedHead: "DELETED",
+    deletedList: ["Profile info (name, photo, email)", "Wallet balance &amp; transaction history", "Chat messages &amp; private photos", "Gifts, points &amp; referral data"],
+    retainedHead: "RETAINED",
+    retainedList: ["Records legally required for tax/accounting purposes, kept for up to 5 years as described in our Privacy Policy"],
+    note: 'See our <a href="privacy-policy.html" style="color:#E24B4A;">Privacy Policy</a> for full details on data retention and your rights under GDPR, LGPD and CCPA/CPRA.'
+  },
+  pt: {
+    eyebrow: "APP AKNNA · YOUR WAY DIGITAL",
+    title: "Excluir a tua conta",
+    version: "Versão 1.0",
+    effective: "Data de vigência: 3 de setembro de 2026",
+    intro: "Podes excluir permanentemente a tua conta Aknna e os dados associados a qualquer momento, diretamente no app ou por e-mail. Esta página explica os dois métodos e o que acontece aos teus dados depois.",
+    step1title: "No app",
+    step1body: 'Abre o Aknna → <code>Perfil</code> → <code>Definições</code> → <code>Excluir Conta</code>, e confirma. A exclusão é imediata e não pode ser desfeita.',
+    step2title: "Por e-mail",
+    step2body: 'Sem acesso ao app? Envia um e-mail para <code>support@aknnaofficial.com</code> a partir do endereço registado na tua conta, com o assunto "Excluir minha conta." Processamos estes pedidos em até 30 dias.',
+    whathappens: "O que acontece aos teus dados",
+    deletedHead: "APAGADO",
+    deletedList: ["Informação de perfil (nome, foto, e-mail)", "Saldo da carteira e histórico de transações", "Mensagens de chat e fotos privadas", "Presentes, pontos e dados de referência"],
+    retainedHead: "MANTIDO",
+    retainedList: ["Registos legalmente exigidos para fins fiscais/contabilísticos, mantidos por até 5 anos, conforme descrito na nossa Política de Privacidade"],
+    note: 'Consulta a nossa <a href="privacy-policy.html" style="color:#E24B4A;">Política de Privacidade</a> para detalhes completos sobre retenção de dados e os teus direitos ao abrigo do RGPD, LGPD e CCPA/CPRA.'
+  },
+  es: {
+    eyebrow: "APP AKNNA · YOUR WAY DIGITAL",
+    title: "Elimina tu cuenta",
+    version: "Versión 1.0",
+    effective: "Fecha de vigencia: 3 de septiembre de 2026",
+    intro: "Puedes eliminar permanentemente tu cuenta de Aknna y los datos asociados en cualquier momento, ya sea directamente en la app o por correo electrónico. Esta página explica ambos métodos y qué ocurre con tus datos después.",
+    step1title: "En la app",
+    step1body: 'Abre Aknna → <code>Perfil</code> → <code>Configuración</code> → <code>Eliminar cuenta</code>, y confirma. La eliminación es inmediata y no se puede deshacer.',
+    step2title: "Por correo electrónico",
+    step2body: '¿Sin acceso a la app? Escribe a <code>support@aknnaofficial.com</code> desde la dirección registrada en tu cuenta, con el asunto "Eliminar mi cuenta." Procesamos estas solicitudes en un plazo de 30 días.',
+    whathappens: "Qué ocurre con tus datos",
+    deletedHead: "ELIMINADO",
+    deletedList: ["Información de perfil (nombre, foto, correo)", "Saldo de la billetera e historial de transacciones", "Mensajes de chat y fotos privadas", "Regalos, puntos y datos de referidos"],
+    retainedHead: "SE CONSERVA",
+    retainedList: ["Registros exigidos legalmente por motivos fiscales/contables, conservados hasta 5 años, según se describe en nuestra Política de Privacidad"],
+    note: 'Consulta nuestra <a href="privacy-policy.html" style="color:#E24B4A;">Política de Privacidad</a> para más detalles sobre la retención de datos y tus derechos según el RGPD, la LGPD y la CCPA/CPRA.'
+  }
+};
+
+function applyLang(lang){
+  const dict = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-list]').forEach(el => {
+    const key = el.getAttribute('data-i18n-list');
+    if (dict[key]) el.innerHTML = dict[key].map(item => `<li>${item}</li>`).join('');
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  document.documentElement.lang = lang;
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+const params = new URLSearchParams(window.location.search);
+const initialLang = params.get('lang');
+if (initialLang && i18n[initialLang]) applyLang(initialLang);
+</script>
+
+</body>
+</html>
