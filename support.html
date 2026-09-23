@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKNNA — Support</title>
+<style>
+  :root{
+    --bg:#000000;
+    --panel:#141414;
+    --ink:#ffffff;
+    --muted:#ffffff;
+    --border:#2a2a2a;
+    --accent:#e24b4a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px 80px;}
+
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 24px;border-bottom:1px solid var(--border);
+    max-width:680px;margin:0 auto;
+  }
+  .wordmark{
+    display:flex;align-items:center;gap:9px;
+    font-weight:800;font-size:20px;letter-spacing:0.08em;
+  }
+  .wordmark .mark{color:var(--accent);font-size:17px;}
+
+  .lang-pill{
+    display:flex;background:var(--panel);border-radius:999px;padding:4px;gap:2px;
+    border:1px solid var(--border);
+  }
+  .lang-pill button{
+    border:none;background:transparent;padding:7px 14px;border-radius:999px;
+    font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;
+    letter-spacing:0.03em;font-family:inherit;
+  }
+  .lang-pill button.active{background:var(--accent);color:#fff;}
+  .lang-pill button:focus-visible,
+  a:focus-visible,
+  summary:focus-visible,
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+
+  .hero{padding:48px 0 8px;}
+  .eyebrow{
+    display:flex;align-items:center;gap:8px;
+    color:var(--accent);font-weight:800;font-size:13px;letter-spacing:0.1em;
+    text-transform:uppercase;margin:0 0 14px;
+  }
+  h1{font-size:34px;font-weight:800;letter-spacing:-0.01em;margin:0 0 12px;line-height:1.15;color:var(--ink);}
+  .sub{color:var(--muted);font-size:16px;margin:0 0 40px;max-width:52ch;}
+
+  section.faq{margin-top:8px;}
+  details{
+    background:var(--panel);border:1px solid var(--border);border-radius:16px;
+    margin-bottom:10px;overflow:hidden;
+  }
+  summary{
+    list-style:none;cursor:pointer;padding:19px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    font-weight:700;font-size:15.5px;color:var(--ink);
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary .chev{
+    flex:0 0 auto;transition:transform .18s ease;color:var(--accent);
+  }
+  details[open] summary .chev{transform:rotate(90deg);}
+  .faq-a{padding:0 20px 20px;color:var(--muted);font-size:15px;}
+  .faq-a a{color:var(--accent);font-weight:600;text-decoration:none;}
+  .faq-a a:hover{text-decoration:underline;}
+
+  .contact{
+    margin-top:40px;background:var(--panel);border:1px solid var(--border);
+    border-radius:20px;padding:30px 26px;
+  }
+  .contact h2{font-size:19px;font-weight:800;margin:0 0 8px;color:var(--ink);}
+  .contact p{color:var(--muted);margin:0 0 22px;font-size:15px;}
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;
+    font-weight:700;font-size:15px;text-decoration:none;
+    padding:13px 24px;border-radius:999px;
+  }
+
+  footer{
+    max-width:680px;margin:48px auto 0;padding:24px;
+    border-top:1px solid var(--border);
+    display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+    color:var(--muted);font-size:13px;
+  }
+  footer .links{display:flex;gap:16px;flex-wrap:wrap;}
+  footer a{text-decoration:none;color:var(--muted);}
+  footer a:hover{color:var(--ink);}
+
+  span[data-i18n]{display:none;}
+  div[data-i18n]{display:none;}
+  html[data-lang="en"] [data-i18n="en"],
+  html[data-lang="pt"] [data-i18n="pt"],
+  html[data-lang="es"] [data-i18n="es"]{display:inline;}
+  html[data-lang="en"] div[data-i18n="en"],
+  html[data-lang="pt"] div[data-i18n="pt"],
+  html[data-lang="es"] div[data-i18n="es"]{display:block;}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark"><span class="mark">✦</span>AKNNA</div>
+  <div class="lang-pill" role="group" aria-label="Language">
+    <button type="button" data-set-lang="en" class="active">EN</button>
+    <button type="button" data-set-lang="pt">PT</button>
+    <button type="button" data-set-lang="es">ES</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <p class="eyebrow">
+      <span>✦</span>
+      <span data-i18n="en">Support</span><span data-i18n="pt">Suporte</span><span data-i18n="es">Soporte</span>
+    </p>
+    <h1>
+      <span data-i18n="en">How can we help?</span>
+      <span data-i18n="pt">Como podemos ajudar?</span>
+      <span data-i18n="es">¿Cómo podemos ayudarte?</span>
+    </h1>
+    <p class="sub">
+      <span data-i18n="en">Find answers below, or reach out — we usually reply within 24–48 hours.</span>
+      <span data-i18n="pt">Veja as respostas abaixo, ou fale com a gente — normalmente respondemos em 24–48 horas.</span>
+      <span data-i18n="es">Encuentra las respuestas abajo, o escríbenos — normalmente respondemos en 24–48 horas.</span>
+    </p>
+  </div>
+
+  <section class="faq">
+
+    <details open>
+      <summary>
+        <span>
+          <span data-i18n="en">How do I manage or cancel my membership?</span>
+          <span data-i18n="pt">Como gerencio ou cancelo minha assinatura?</span>
+          <span data-i18n="es">¿Cómo gestiono o cancelo mi membresía?</span>
+        </span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <div data-i18n="en">Membership is billed through the App Store or Google Play. On iPhone, go to Settings → [your name] → Subscriptions. On Android, open the Play Store → Menu → Payments &amp; subscriptions → Subscriptions. Cancelling stops future renewals — you keep member access until the current period ends.</div>
+        <div data-i18n="pt">A assinatura é cobrada pela App Store ou Google Play. No iPhone, vá em Ajustes → [seu nome] → Assinaturas. No Android, abra a Play Store → Menu → Pagamentos e assinaturas → Assinaturas. Cancelar interrompe as próximas renovações — você mantém o acesso de membro até o fim do período atual.</div>
+        <div data-i18n="es">La membresía se cobra a través de la App Store o Google Play. En iPhone, ve a Ajustes → [tu nombre] → Suscripciones. En Android, abre Play Store → Menú → Pagos y suscripciones → Suscripciones. Cancelar detiene las próximas renovaciones — conservas el acceso de miembro hasta el final del período actual.</div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span>
+          <span data-i18n="en">How do wallet credits work?</span>
+          <span data-i18n="pt">Como funcionam os créditos da carteira?</span>
+          <span data-i18n="es">¿Cómo funcionan los créditos de la cartera?</span>
+        </span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <div data-i18n="en">Credits are purchased inside the app and used for gifts, featured messages, song requests, and mix downloads. Credits don't expire, but purchases are final except where required by law.</div>
+        <div data-i18n="pt">Os créditos são comprados dentro do app e usados para presentes, mensagens em destaque, pedidos de música e downloads de mixes. Os créditos não expiram, mas as compras são finais, exceto quando exigido por lei.</div>
+        <div data-i18n="es">Los créditos se compran dentro de la app y se usan para regalos, mensajes destacados, solicitudes de canciones y descargas de mixes. Los créditos no caducan, pero las compras son definitivas salvo que la ley exija lo contrario.</div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span>
+          <span data-i18n="en">How do I delete my account?</span>
+          <span data-i18n="pt">Como excluo minha conta?</span>
+          <span data-i18n="es">¿Cómo elimino mi cuenta?</span>
+        </span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <div data-i18n="en">Open the app, go to Profile, and choose Delete account — or use our <a href="delete-account.html">account deletion page</a>. Your data is removed or anonymized within 30 days, except where we're required to keep records by law.</div>
+        <div data-i18n="pt">Abra o app, vá em Perfil e escolha Excluir conta — ou use nossa <a href="delete-account.html">página de exclusão de conta</a>. Seus dados são removidos ou anonimizados em até 30 dias, exceto quando somos obrigados a manter registros por lei.</div>
+        <div data-i18n="es">Abre la app, ve a Perfil y elige Eliminar cuenta — o usa nuestra <a href="delete-account.html">página de eliminación de cuenta</a>. Tus datos se eliminan o anonimizan en un plazo de 30 días, salvo que debamos conservarlos por ley.</div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span>
+          <span data-i18n="en">A purchase or credit didn't show up. What do I do?</span>
+          <span data-i18n="pt">Uma compra ou crédito não apareceu. O que eu faço?</span>
+          <span data-i18n="es">Una compra o crédito no apareció. ¿Qué hago?</span>
+        </span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <div data-i18n="en">Restart the app and check your balance in Wallet. If it still hasn't appeared after a few minutes, contact us with your purchase receipt and we'll sort it out.</div>
+        <div data-i18n="pt">Reinicie o app e confira o saldo na Carteira. Se ainda não aparecer após alguns minutos, entre em contato com o comprovante da compra e resolvemos pra você.</div>
+        <div data-i18n="es">Reinicia la app y revisa tu saldo en Cartera. Si tras unos minutos sigue sin aparecer, contáctanos con el recibo de la compra y lo resolvemos.</div>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span>
+          <span data-i18n="en">How do I reach Aknna directly?</span>
+          <span data-i18n="pt">Como falo diretamente com a Aknna?</span>
+          <span data-i18n="es">¿Cómo contacto directamente con Aknna?</span>
+        </span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="faq-a">
+        <div data-i18n="en">Use Send message inside the app (Profile → Send message), or email us below.</div>
+        <div data-i18n="pt">Use Enviar mensagem dentro do app (Perfil → Send message), ou envie um email abaixo.</div>
+        <div data-i18n="es">Usa Enviar mensaje dentro de la app (Perfil → Send message), o escríbenos por email abajo.</div>
+      </div>
+    </details>
+
+  </section>
+
+  <div class="contact">
+    <h2>
+      <span data-i18n="en">Still need help?</span>
+      <span data-i18n="pt">Ainda precisa de ajuda?</span>
+      <span data-i18n="es">¿Aún necesitas ayuda?</span>
+    </h2>
+    <p>
+      <span data-i18n="en">Email us and we'll get back to you.</span>
+      <span data-i18n="pt">Escreva pra gente e a gente responde.</span>
+      <span data-i18n="es">Escríbenos y te responderemos.</span>
+    </p>
+    <a class="btn" href="mailto:yourwaydigitalllc@gmail.com">
+      <span data-i18n="en">Email support</span>
+      <span data-i18n="pt">Enviar email</span>
+      <span data-i18n="es">Enviar email</span>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="links">
+    <a href="privacy-policy.html">
+      <span data-i18n="en">Privacy Policy</span>
+      <span data-i18n="pt">Política de Privacidade</span>
+      <span data-i18n="es">Política de Privacidad</span>
+    </a>
+    <a href="terms-of-use.html">
+      <span data-i18n="en">Terms of Use</span>
+      <span data-i18n="pt">Termos de Uso</span>
+      <span data-i18n="es">Términos de Uso</span>
+    </a>
+  </div>
+  <div>© 2026 Your Way Digital</div>
+</footer>
+
+<script>
+  var buttons = document.querySelectorAll('[data-set-lang]');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var lang = btn.getAttribute('data-set-lang');
+      document.documentElement.setAttribute('data-lang', lang);
+      buttons.forEach(function(b){ b.classList.toggle('active', b === btn); });
+    });
+  });
+</script>
+
+</body>
+</html>
